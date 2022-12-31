@@ -1,0 +1,53 @@
+
+{% extends 'customer/cust_home.html' %}
+{% load static %}
+
+
+
+{% block header %}
+
+{% endblock %}
+
+
+{% block content %}
+<div style="color: rgb(233, 119, 81); margin-left: 500px;">
+    <h3><b><i>MY ORDER DETAILS</i></b> </h3>
+</div><hr>
+
+<div class="table-responsive">
+    <table class="table table-danger table-hover align-middle">
+        <thead>
+            <tr>
+                <th>#No</th>
+                <th>category Name</th>
+                <th>image</th>
+                <th>price</th>
+                <th>Quntity</th>
+                <th>date</th>
+                <th>Time</th>
+                <th>Satus</th>
+            </tr>
+
+        </thead>
+        <tbody class="table-group-divider">
+            <tr>
+                <td>1</td>
+                <td>NIVEA-Face Wash</td>
+                <td><img src="{% static 'images/nivea.png' %}" alt=""></td>
+                <td>250</td>
+                <td>2</td>
+                <td>12/12/2022</td>
+                <td>6.00</td>
+                <td>processing</td>
+               
+                
+            </tr>
+          
+
+        </tbody>
+            
+       
+        
+    </table>
+</div>
+{% endblock %}

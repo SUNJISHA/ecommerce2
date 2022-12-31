@@ -1,0 +1,18 @@
+/* .formstyle  
+{  
+width: 300px;  
+height: 550px;  
+margin: auto; 
+margin-top: 15px;
+border: 3px black solid;  
+border-radius: 5px;  
+padding: 25px;  
+} */
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}

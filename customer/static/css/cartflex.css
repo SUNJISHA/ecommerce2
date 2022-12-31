@@ -1,0 +1,29 @@
+#parentt{
+    display: flex;
+    flex-direction: auto;
+    flex-wrap: nowrap;
+    flex-basis: auto;
+    /* height: 330px;
+    width: auto; */
+}
+
+#ca1{
+    
+    margin: 30px;
+    text-align: center;
+    line-height: 50px;
+ 
+    padding: 10px;
+    
+
+}
+#ca2{
+    
+    margin: 30px;
+    text-align: center;
+    line-height: 50px;
+ 
+    padding: 10px;
+    
+
+}

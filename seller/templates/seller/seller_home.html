@@ -1,0 +1,28 @@
+{% extends 'seller/seller_master.html' %}
+{% load static %}
+
+    
+  {% block header %}
+  {% endblock %}
+
+  {% block content %}
+
+
+  <h2  style="color: rgb(218, 104, 66); margin-left: 300px; ">welcome  {{seller_prof.seller_name}}</h2>
+
+<!-- <div class="card " style="width: 500px; margin-left: 300px;">
+    <img src="{{seller_prof.seller_pic.url}}"  alt="..." height="500px"  >
+    <div class="card-img-overlay">
+      <h5 class="card-title text-dark">{{seller_prof.seller_name|title}}</h5>
+      
+          
+    </div> -->
+  <!-- </div> -->
+
+  <img src="{{seller_prof.seller_pic.url}}"  alt="..." height="500px"  style="border-radius: 500px; margin-left: 200px;" >
+
+
+  
+
+
+  {% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'customer/cust_home.html' %}
+
+{% load static %}
+
+{% block header %}
+
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+   <!-- <h2  style="color: rgb(218, 104, 66); margin-left: 300px; ">PRODUCT DETAILS</h2>
+<div class="card " style="width: 500px; margin-left: 300px;">
+<form action="" method ="POST">
+{% csrf_token %}
+<input type="hidden" value="{{product.id}}" name="" id="">
+    <img src="{{product.pro_image.url}}" class="card-img opacity-25" alt="..." height="500px"  >
+    <div class="card-img-overlay">
+      <h5 class="card-title text-dark">{{product.pro_name|title}}</h5>
+      <p class="card-text text-dark">{{product.pro_description}}</p><br>
+      
+        <p class=" text-danger">Rs: {{product.pro_price}} </p>
+       </form>   
+    </div>
+  </div> -->
+
+
+
+  <div id="parent">
+    
+    <div>
+      
+        <div id="c1">
+         
+          <div class="card" style="width: 20rem;">
+            <form action="" method ="POST">
+              {% csrf_token %}
+              <input type="hidden" value="{{product.id}}" name="pid" id="">
+            
+          <img src="{{product.pro_image.url}}" class="card-img-top" alt="..."height="250px"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{product.pro_name|title}}</h5>
+            <p class="card-text">Rs: {{product.pro_price}}</p>
+            <p class="card-text">{{product.pro_description}}</p>
+            <button >ADD CART</button>{{ msg }}
+            <!-- <a href="{% url 'customers:cus_cart' %}" class="btn btn-primary" ></a> -->
+            <div>Seller - {{product.seller.seller_name|upper}}</div>
+
+          </div>
+        </form> 
+        </div>
+      </div>
+    </div> 
+  
+
+
+{% endblock %}

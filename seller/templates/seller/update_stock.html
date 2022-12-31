@@ -1,0 +1,43 @@
+{% extends 'seller/seller_master.html' %}
+{% load static %}
+
+    
+  {% block header %}
+  {% endblock %}
+
+  {% block content %}
+
+  <section class="banner-left ">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-lg-6">
+                <div class="banner-content">
+                    <div style="float: right;" ><img src="{% static 'images/upda.png' %}" alt="" width="600px" height="500px" style="border-radius: 600px;"></div>  
+                </div>
+            </div>
+            <div class="col-lg-6" style="float: right; color:rgb(7, 117, 243);" >
+                
+                <h2 style="color: rgb(129, 49, 234);" ><b><i>Update Stock</i></b></h2><br /><br />
+               
+                <div class="mb-4">
+                    <label for="exampleFormControlInput1" class="form-label "><b>PRODUCT NUMBER</b></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=""><br /><br />
+                    <label for="exampleFormControlInput2" class="form-label"><b></b></label>CURRENT STOCK
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=""><br /><br />
+                    <label for="exampleFormControlInput2" class="form-label"><b>NEW STOCK</b></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=""><br /><br />
+                    <center>
+                    <button type="button" class="btn btn-outline-primary" style="width: 30%;">SUBMIT</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   
+                    </center>
+                    <br /><br />
+                   
+                </div>
+              
+            </div>
+        </div>
+    </div>   
+</section> 
+
+
+  {% endblock %}

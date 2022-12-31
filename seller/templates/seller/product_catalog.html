@@ -1,0 +1,33 @@
+{% extends 'seller/seller_master.html' %}
+{% load static %}
+
+    
+  {% block header %}
+  <link  rel="stylesheet" href="{% static 'css/pro_cat.css' %}" >
+  {% endblock %}
+
+  {% block content %}
+
+  <div id="parent">
+    <div>
+       
+      {% for product in products %}
+        <div id="c1">
+          <div class="card" style="width: 20rem;">
+            <a href="#">
+          <img src="{{ product.pro_image.url}}" class="card-img-top" alt="..."height="250px"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{product.pro_name}}</h5>
+            <a href="#" class="btn btn-primary ">Go Somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>&nbsp;&nbsp;&nbsp;
+
+  {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  
+  {% endblock %}

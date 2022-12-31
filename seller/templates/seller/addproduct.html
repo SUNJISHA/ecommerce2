@@ -1,0 +1,132 @@
+{% extends 'seller/seller_master.html' %}
+{% load static %}
+
+    
+  {% block header %}
+  {% endblock %}
+
+
+  {% block content %}
+ 
+
+    <section class="vh-100">
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-9">
+      
+              <h1 class="text-black mb-4">ADD PRODUCT</h1>
+      
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body">
+      
+                  <div class="row align-items-center pt-4 pb-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Product Name</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="text" class="form-control form-control-lg" name="product_name" />
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0"> Product Number</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="text" class="form-control form-control-lg" name="product_number" />
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Description </h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <textarea class="form-control" rows="3" placeholder="product details" name="description"></textarea>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">file Upload</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input class="form-control form-control-lg" id="formFileLg" type="file"  name="pro_images"/>
+                      <div class="small text-muted mt-2"></div>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+
+
+                  
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0"> Price</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="text" class="form-control form-control-lg"  name="price"/>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+
+                  
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0"> Current Stock</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="text" class="form-control form-control-lg" name="stock" />
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="px-5 py-4">
+                    <button type="submit" class="btn btn-primary btn-lg">ADD</button>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </form>
+      </section>
+    
+      {% endblock %}

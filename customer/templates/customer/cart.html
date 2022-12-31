@@ -1,0 +1,73 @@
+
+{% extends 'customer/cust_home.html' %}
+
+{% load static %}
+
+{% block header %}
+<link  rel="stylesheet" href="{% static 'css/cartflex.css' %}" >
+
+{% endblock %}
+
+
+    
+
+
+
+{% block content %}
+
+ <!-- <div id="parentt">
+
+    <div id="ca1">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="{%static 'images/smartwatch.png'%} "  alt=""  class="img-fluid rounded-start"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Smart Watch</h5>
+                  <p class="card-text">
+                    boAt Xtend/Xtend RTL Smartwatch with Alexa Built-in, 1.69” HD Display, Multiple Watch Faces,
+                     Stress Monitor, Heart & SpO2 Monitoring, 14 Sports Modes, 5 ATM & 7 Days Battery(Sandy Cream)
+                  </p>
+                  <p class="card-text text-primary">-65% offer&nbsp; ₹2,799</p>
+                  <p class="card-text">
+                    <!-- <a href="#" class="btn btn-primary" >Add To Cart</a> -->
+                    <!-- <a href="#" class="btn btn-success">Buy Now</a>
+                  </p>
+                </div>
+              </div>
+         </div>
+     </div>
+  </div>
+
+
+    </div> --> 
+
+    <table class="table table-success table-hover align-middle">
+      <tr>
+        <th> si.no</th>
+        <th>product name</th>
+        <th> des</th>
+        <th>img</th>
+        <th>price</th>
+        <th> DELETE</th>
+      </tr>
+      {% for cart in cart_list %}
+      <tr>
+        <th>{{cart.product.pro_number}}</th>
+        <th>{{cart.product.pro_name}}</th>
+        <th>{{cart.product.pro_description}}</th>
+        <th><img src="{{cart.product.pro_image.url}}" alt="" height="50px"></th>
+        <th>{{cart.product.pro_price}}</th>
+        <th>
+          <a href="{% url 'customers:cus_delete' cart.product.id %}" class="btn btn-danger">DELETE</a></th>
+      </tr>
+      {% endfor %}
+    </table>
+
+
+  
+    {% endblock %}

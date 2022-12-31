@@ -1,0 +1,146 @@
+{% extends 'common/common_master.html' %}
+{% load static %}
+
+    
+  {% block header %}
+  {% endblock %}
+
+  {% block content %}
+
+  <h3>SELLER</h3>
+
+    <section class="h-100 ">
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    
+
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card card-registration my-4">
+                <div class="row g-0">
+                  <div class="col-xl-6 d-none d-xl-block">
+                    <img src="https://thumbs.dreamstime.com/b/male-buyer-female-seller-store-payment-card-man-character-shopping-bags-hands-gifts-sale-label-guy-behind-192244875.jpg"
+                        alt="Sample photo" class="img-fluid"
+                      style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"  />
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="card-body p-md-5 text-black">
+                      <h3 class="mb-5 text-uppercase">seller registration form</h3>
+      
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1m">First name</label>
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg"  name="fname"/>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1n">email</label>
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" name="email" />
+                           
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1m1">Address</label>
+                            <input type="texrarea" id="form3Example1m1" class="form-control form-control-lg" name="address" />
+                           
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <!-- <input type="text" id="form3Example1n1" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Example1n1">Address</label> -->
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example8">Phone</label>
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" name="phone" />
+                        
+                      </div>
+      
+                      <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+      
+                        <h6 class="mb-0 me-4">Gender: </h6>
+      
+                        <div class="form-check form-check-inline mb-0 me-4">
+                          <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                            value="female" />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline mb-0 me-4">
+                          <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                            value="male" />
+                          <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline mb-0">
+                          <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                            value="other" />
+                          <label class="form-check-label" for="otherGender">Other</label>
+                        </div>
+      
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example8">company name</label>
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" name="company_name"/><br><br>
+
+                        <h5 > Bank Details</h5>
+                        
+                      </div>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example8">Account holder</label>
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" name="account_holder"/>
+                       
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example8">Bank account no:</label>
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" name="act_num" />
+                        
+                      </div>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example8">ifsc code</label>
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" name="ifsc" />
+                        
+                      </div>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example8">Branch</label>
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" name="branch" />
+                        
+                      </div>
+                      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="customFile"><b>UPLOAD IMG</b></label>
+                        <input type="file" class="form-control" id="customFile"  name="image"/><br><br>
+                      </div>
+      
+                     
+      
+      
+                      <div class="d-flex justify-content-end pt-3">
+                        <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                        <button type="submitt" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                      </div>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      </section>
+
+
+      {% endblock %}

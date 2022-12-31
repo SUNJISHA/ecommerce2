@@ -1,0 +1,39 @@
+{% extends 'seller/seller_master.html' %}
+{% load static %}
+
+    
+  {% block header %}
+  {% endblock %}
+
+  {% block content %}
+<h2 style="color: blue; margin-left: 400px; margin-top: 50px;">CHANGE PASSWORD</h2>
+  <br><br>
+  <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1" style="margin-left: 400px;">
+    <form action="" method ="POST">
+      {% csrf_token %}
+       
+        <div class="form-outline mb-4">
+          <input type="password" id="form1Example13" class="form-control form-control-lg" name="curent_pass" />
+          <label class="form-label" for="form1Example13">Old Password</label>
+        </div>
+
+        
+        <div class="form-outline mb-4">
+          <input type="password" id="form1Example23" class="form-control form-control-lg" name="new_pass" />
+          <label class="form-label" for="form1Example23"> New Password</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input type="password" id="form1Example23" class="form-control form-control-lg" name="confirm_pass" />
+          <label class="form-label" for="form1Example23"> Confrim</label>
+        </div>
+
+        {{msg}}
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-lg btn-block">OK</button>
+        <br><br><br>
+        </form>
+  {% endblock %}
+    
+  
